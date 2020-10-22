@@ -1,0 +1,30 @@
+{
+  "version": 2,
+  "dgSpecHash": "0+3J6kmVvNJToMdVzSbPnSHx2Xmk1oWp03C7nAxHjsqoPobE05IT393eeZJ9edzh1FdraeAPP+WJSJp7x/8RhA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Marlo\\source\\repos\\FeriaVirtualApp\\FeriaVirtualApp\\FeriaVirtualApp\\FeriaVirtualApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Marlo\\.nuget\\packages\\acr.userdialogs\\7.1.0.462\\acr.userdialogs.7.1.0.462.nupkg.sha512",
+    "C:\\Users\\Marlo\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Marlo\\.nuget\\packages\\modernhttpclient\\2.4.2\\modernhttpclient.2.4.2.nupkg.sha512",
+    "C:\\Users\\Marlo\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Marlo\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\Marlo\\.nuget\\packages\\refractored.mvvmhelpers\\1.6.2\\refractored.mvvmhelpers.1.6.2.nupkg.sha512",
+    "C:\\Users\\Marlo\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\Marlo\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512",
+    "C:\\Users\\Marlo\\.nuget\\packages\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
+    "C:\\Users\\Marlo\\.nuget\\packages\\xamarin.forms\\4.8.0.1560\\xamarin.forms.4.8.0.1560.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "El paquete \"modernhttpclient 2.4.2\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8\" en lugar de la plataforma de destino del proyecto \".NETStandard,Version=v2.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
+      "libraryId": "modernhttpclient",
+      "targetGraphs": [
+        ".NETStandard,Version=v2.0"
+      ]
+    }
+  ]
+}

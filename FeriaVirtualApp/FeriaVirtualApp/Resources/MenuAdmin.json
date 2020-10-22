@@ -1,0 +1,22 @@
+[
+  {
+    "Title": "Productores",
+    "Target": "FeriaVirtualApp.Views.Admin.ProductorPage",
+    "Icon": "icon.png"
+  },
+  {
+    "Title": "Afiliaciones",
+    "Target": "FeriaVirtualApp.Views.Admin.AfiliacionPage",
+    "Icon": "icon.png"
+  },
+  {
+    "Title": "Categorías",
+    "Target": "FeriaVirtualApp.Views.Admin.CategoriaPage",
+    "Icon": "icon.png"
+  },
+  {
+    "Title": "Reportes",
+    "Target": "FeriaVirtualApp.Views.Admin.ReportesPage",
+    "Icon": "icon.png"
+  }
+]

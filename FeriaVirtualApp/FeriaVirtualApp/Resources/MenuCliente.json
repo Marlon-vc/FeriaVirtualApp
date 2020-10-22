@@ -1,0 +1,22 @@
+[
+  {
+    "Title": "Mi perfil",
+    "Target": "FeriaVirtualApp.Views.Cliente.PerfilPage",
+    "Icon": "icon.png"
+  },
+  {
+    "Title": "Productores",
+    "Target": "FeriaVirtualApp.Views.Cliente.ProductoresPage",
+    "Icon": "icon.png"
+  },
+  {
+    "Title": "Mi carrito",
+    "Target": "FeriaVirtualApp.Views.Cliente.CarritoPage",
+    "Icon": "icon.png"
+  },
+  {
+    "Title": "Mis órdenes",
+    "Target": "FeriaVirtualApp.Views.Cliente.OrdenPage",
+    "Icon": "icon.png"
+  }
+]
