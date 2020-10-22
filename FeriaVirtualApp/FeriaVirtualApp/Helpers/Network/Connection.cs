@@ -47,7 +47,7 @@ namespace FeriaVirtualApp.Helpers.Network
 
         private static async Task<Response> MakeRequest(Method method, string url, string bodyContent, int timeout)
         {
-            using (var client = new HttpClient(new NativeMessageHandler()))
+            using (var client = new HttpClient())
             using (var ts = new CancellationTokenSource(TimeSpan.FromSeconds(timeout)))
             {
                 try
@@ -91,9 +91,9 @@ namespace FeriaVirtualApp.Helpers.Network
                 catch (ArgumentNullException ex)
                 {
                 }
-                //catch (Exception ex)
-                //{
-                //}
+                catch (Exception ex)
+                {
+                }
                 return new Response(HttpStatusCode.BadRequest, false, null);
             }
         }

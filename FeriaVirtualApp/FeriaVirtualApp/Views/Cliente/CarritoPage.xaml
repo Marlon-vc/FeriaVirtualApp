@@ -1,12 +1,47 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="FeriaVirtualApp.Views.Cliente.CarritoPage">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+             x:Class="FeriaVirtualApp.Views.Cliente.CarritoPage"
+             xmlns:context="clr-namespace:FeriaVirtualApp.ViewModels"
+             x:DataType="context:CarritoViewModel"
+             xmlns:items="clr-namespace:FeriaVirtualApp.Models"
+             Title="Mi carrito">
+
+    <StackLayout>
+        <CollectionView ItemsSource="{Binding CarritoItems}">
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Orientation="Horizontal"
+                             x:DataType="items:CarritoListItem"
+                             Padding="10">
+
+                        <Image Source="{Binding Foto}"
+                           WidthRequest="60"
+                           HeightRequest="60"
+                           BackgroundColor="White"
+                           VerticalOptions="Center"/>
+
+                        <Label Text="{Binding Nombre}"
+                           HorizontalOptions="FillAndExpand"
+                           FontSize="Medium"/>
+
+                        <Entry Text="{Binding Cantidad}"
+                           WidthRequest="50"
+                           Keyboard="Numeric"/>
+
+                        <Button Text="Quitar"
+                            VerticalOptions="Center"
+                            HorizontalOptions="End"/>
+
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        
+        <Button Text="Realizar compra"
+                Command="{Binding RealizarCompraCommand}"
+                Margin="10,0,10,20"/>
+    </StackLayout>
+    
 </ContentPage>

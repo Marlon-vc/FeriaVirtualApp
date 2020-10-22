@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FeriaVirtualApp.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,7 @@ namespace FeriaVirtualApp.Views.Cliente
         public ProductoresPage()
         {
             InitializeComponent();
+            BindingContext = new ProductoresViewModel(Navigation);
         }
     }
 }

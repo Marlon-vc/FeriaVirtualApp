@@ -1,12 +1,106 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="FeriaVirtualApp.Views.Cliente.PerfilPage">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+             x:Class="FeriaVirtualApp.Views.Cliente.PerfilPage"
+             xmlns:context="clr-namespace:FeriaVirtualApp.ViewModels"
+             x:DataType="context:PerfilViewModel"
+             Title="Mi perfil">
+
+
+    <ScrollView>
+        <Grid Padding="20,30,20,20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="120" />
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Row="0"
+               Grid.Column="0"
+                   FontSize="Medium"
+                   FontAttributes="Bold"
+               Text="Id:"/>
+
+            <Label Grid.Row="0"
+                   Grid.Column="1"
+                   FontSize="Medium"
+                   Text="{Binding Model.Identificacion}"/>
+
+            <Label Grid.Row="1"
+               Grid.Column="0"
+                   FontSize="Medium"
+                   FontAttributes="Bold"
+               Text="Nombre:"/>
+
+            <Label Grid.Row="1"
+               Grid.Column="1"
+                   FontSize="Medium"
+               Text="{Binding Model.Nombre}"/>
+
+            <Label Grid.Row="2"
+               Grid.Column="0"
+                   FontSize="Medium"
+                   FontAttributes="Bold"
+               Text="Teléfono:"/>
+
+            <Label Grid.Row="2"
+               Grid.Column="1"
+                   FontSize="Medium"
+               Text="{Binding Model.Telefono}"/>
+
+            <Label Grid.Row="3"
+               Grid.Column="0"
+                   FontSize="Medium"
+                   FontAttributes="Bold"
+               Text="Nacimiento:"/>
+
+            <Label Grid.Row="3"
+               Grid.Column="1"
+                   FontSize="Medium"
+               Text="{Binding Model.FechaNacimiento}"/>
+
+            <Label Grid.Row="4"
+               Grid.Column="0"
+                   FontSize="Medium"
+                   FontAttributes="Bold"
+               Text="Provincia:"/>
+
+            <Label Grid.Row="4"
+               Grid.Column="1"
+                   FontSize="Medium"
+               Text="{Binding Model.Provincia}"/>
+
+            <Label Grid.Row="5"
+               Grid.Column="0"
+                   FontSize="Medium"
+                   FontAttributes="Bold"
+               Text="Cantón:"/>
+
+            <Label Grid.Row="5"
+               Grid.Column="1"
+                   FontSize="Medium"
+               Text="{Binding Model.Canton}"/>
+            
+            <Label Grid.Row="6"
+               Grid.Column="0"
+                   FontSize="Medium"
+                   FontAttributes="Bold"
+               Text="Distrito:"/>
+
+            <Label Grid.Row="6"
+               Grid.Column="1"
+                   FontSize="Medium"
+               Text="{Binding Model.Distrito}"/>
+
+        </Grid>
+    </ScrollView>
+    
 </ContentPage>

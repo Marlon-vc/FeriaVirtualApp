@@ -15,7 +15,7 @@
     "Icon": "icon.png"
   },
   {
-    "Title": "Mis órdenes",
+    "Title": "Mis ordenes",
     "Target": "FeriaVirtualApp.Views.Cliente.OrdenPage",
     "Icon": "icon.png"
   }

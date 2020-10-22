@@ -10,7 +10,7 @@
     "Icon": "icon.png"
   },
   {
-    "Title": "Categorías",
+    "Title": "Categorias",
     "Target": "FeriaVirtualApp.Views.Admin.CategoriaPage",
     "Icon": "icon.png"
   },

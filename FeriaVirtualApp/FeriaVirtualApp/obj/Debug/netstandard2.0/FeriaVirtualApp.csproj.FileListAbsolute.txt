@@ -26,3 +26,4 @@ C:\Users\Marlo\source\repos\FeriaVirtualApp\FeriaVirtualApp\FeriaVirtualApp\obj\
 C:\Users\Marlo\source\repos\FeriaVirtualApp\FeriaVirtualApp\FeriaVirtualApp\obj\Debug\netstandard2.0\FeriaVirtualApp.dll
 C:\Users\Marlo\source\repos\FeriaVirtualApp\FeriaVirtualApp\FeriaVirtualApp\obj\Debug\netstandard2.0\ref\FeriaVirtualApp.dll
 C:\Users\Marlo\source\repos\FeriaVirtualApp\FeriaVirtualApp\FeriaVirtualApp\obj\Debug\netstandard2.0\FeriaVirtualApp.pdb
+C:\Users\Marlo\source\repos\FeriaVirtualApp\FeriaVirtualApp\FeriaVirtualApp\obj\Debug\netstandard2.0\FeriaVirtualApp.csprojAssemblyReference.cache

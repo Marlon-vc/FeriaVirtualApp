@@ -6,7 +6,9 @@
     Title="Feria Virtual">
     
     <!--Pages can be added as references or inline-->
-    <StackLayout Orientation="Vertical">
-        <Label Text="Bienvenido a la Feria Virtual, abre el menú para iniciar."/>
+    <StackLayout Orientation="Vertical"
+                 Padding="30">
+        <Label Text="Bienvenido a la Feria Virtual, abre el menú para iniciar."
+               FontSize="Large"/>
     </StackLayout>
 </ContentPage>

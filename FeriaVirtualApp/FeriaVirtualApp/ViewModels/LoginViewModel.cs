@@ -15,7 +15,7 @@ namespace FeriaVirtualApp.ViewModels
 {
     public class LoginViewModel
     {
-        public LoginModel Model { get; set; }
+        public Models.LoginModel Model { get; set; }
         public Command LoginCommand { get; set; }
         private INavigation Nav { get; set; }
         private IUserDialogs Dialogs { get; set; }
@@ -23,9 +23,21 @@ namespace FeriaVirtualApp.ViewModels
         public LoginViewModel(INavigation nav)
         {
             Nav = nav;
-            Model = new LoginModel();
+            Model = new Models.LoginModel();
             Dialogs = UserDialogs.Instance;
             LoginCommand = new Command(_ => OnLogin().ConfigureAwait(false));
+        }
+
+        public async Task OnDebug()
+        {
+            var response = await Connection.Get(Urls.Productores)
+                .ConfigureAwait(false);
+
+            Dialogs.Alert(new AlertConfig
+            {
+                Message = response.ResponseBody,
+                OkText = "Aceptar"
+            });
         }
 
         public async Task OnLogin()
@@ -58,7 +70,7 @@ namespace FeriaVirtualApp.ViewModels
 
             if (response.Succeeded)
             {
-                var loginData = response.ParseBody<Login>();
+                var loginData = response.ParseBody<Models.Api.LoginModel>();
                 var userType = loginData.Client ? "cliente" : "productor";
 
                 Preferences.Set(Config.UserLogged, true, Config.SharedName);

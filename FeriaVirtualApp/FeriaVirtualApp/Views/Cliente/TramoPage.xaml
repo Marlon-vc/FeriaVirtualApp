@@ -1,12 +1,43 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="FeriaVirtualApp.Views.Cliente.TramoPage">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+             x:Class="FeriaVirtualApp.Views.Cliente.TramoPage"
+             xmlns:context="clr-namespace:FeriaVirtualApp.ViewModels"
+             xmlns:items="clr-namespace:FeriaVirtualApp.Models.Api"
+             x:DataType="context:TramoViewModel"
+             Title="Productos disponibles">
+
+    <CollectionView ItemsSource="{Binding Productos}"
+                    ItemSizingStrategy="MeasureAllItems">
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <StackLayout x:DataType="items:ProductoModel"
+                             Padding="10"
+                             Orientation="Horizontal">
+
+                    <Image Source="{Binding Foto}"
+                           BackgroundColor="White"
+                           VerticalOptions="Center"
+                           HeightRequest="60"
+                           WidthRequest="60"/>
+
+                    <StackLayout HorizontalOptions="FillAndExpand">
+                        <Label Text="{Binding Nombre}"
+                           FontSize="Medium"/>
+                        <Label Text="{Binding Precio, StringFormat='Precio: ₡{0}'}"/>
+                        <Label Text="{Binding Disponibilidad, StringFormat='Stock: {0}'}"/>
+                    </StackLayout>
+
+                    <Button Text="Agregar"
+                            VerticalOptions="Center"
+                            HorizontalOptions="End"
+                            CommandParameter="{Binding .}"
+                            Command="{Binding Source={RelativeSource AncestorType={x:Type context:TramoViewModel}}, Path=AgregarAlCarritoCommand}"/>
+
+                </StackLayout>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+        
+    </CollectionView>
+    
 </ContentPage>
